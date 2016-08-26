@@ -1,4 +1,4 @@
-System.register(['angular2/core', './hero.service', './heroes.component', './hero-detail.component', './dashboard.component', 'angular2/router'], function(exports_1, context_1) {
+System.register(['angular2/core', './hero.service', './heroes.component', './hero-detail.component', './dashboard.component', './gotchas.component', 'angular2/router'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', './hero.service', './heroes.component', './her
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, hero_service_1, heroes_component_1, hero_detail_component_1, dashboard_component_1, router_1;
+    var core_1, hero_service_1, heroes_component_1, hero_detail_component_1, dashboard_component_1, gotchas_component_1, router_1;
     var AppComponent;
     return {
         setters:[
@@ -29,6 +29,9 @@ System.register(['angular2/core', './hero.service', './heroes.component', './her
             function (dashboard_component_1_1) {
                 dashboard_component_1 = dashboard_component_1_1;
             },
+            function (gotchas_component_1_1) {
+                gotchas_component_1 = gotchas_component_1_1;
+            },
             function (router_1_1) {
                 router_1 = router_1_1;
             }],
@@ -40,7 +43,7 @@ System.register(['angular2/core', './hero.service', './heroes.component', './her
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n    <h1>{{title}}</h1>\n\t<nav>\n\t\t<a [routerLink]=\"['Heroes']\">Heroes</a>\n\t\t<a [routerLink]=\"['Dashboard']\">Dashboard</a>\n\t</nav>\n    <router-outlet></router-outlet>\n  ",
+                        template: "\n    <h1>{{title}}</h1>\n\t<nav>\n\t\t<a [routerLink]=\"['Heroes']\">Heroes</a>\n\t\t<a [routerLink]=\"['Dashboard']\">Dashboard</a>\n    <a [routerLink]=\"['Gotchas']\">Gotchas</a>\n\t</nav>\n    <router-outlet></router-outlet>\n  ",
                         styleUrls: ['app/app.component.css'],
                         directives: [router_1.ROUTER_DIRECTIVES],
                         providers: [
@@ -64,6 +67,11 @@ System.register(['angular2/core', './hero.service', './heroes.component', './her
                             path: '/detail/:id',
                             name: 'HeroDetail',
                             component: hero_detail_component_1.HeroDetailComponent
+                        },
+                        {
+                            path: '/gotchas',
+                            name: 'Gotchas',
+                            component: gotchas_component_1.GotchasComponent
                         }
                     ]), 
                     __metadata('design:paramtypes', [])

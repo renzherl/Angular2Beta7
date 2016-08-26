@@ -3,6 +3,7 @@ import { HeroService }     from './hero.service';
 import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { DashboardComponent} from './dashboard.component';
+import { GotchasComponent } from './gotchas.component';
 
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 
@@ -13,6 +14,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router
 	<nav>
 		<a [routerLink]="['Heroes']">Heroes</a>
 		<a [routerLink]="['Dashboard']">Dashboard</a>
+    <a [routerLink]="['Gotchas']">Gotchas</a>
 	</nav>
     <router-outlet></router-outlet>
   `,
@@ -42,6 +44,12 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router
   path: '/detail/:id',
   name: 'HeroDetail',
   component: HeroDetailComponent
+}
+,
+{
+	path: '/gotchas',
+	name: 'Gotchas',
+	component: GotchasComponent
 }
 
 ])
